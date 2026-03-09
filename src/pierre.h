@@ -3,7 +3,7 @@
 
 #include "animal.h"
 
-class Pierre : Animal
+class Pierre : public Animal
 {
     public :
     Pierre(int maxX, int maxY);

@@ -3,10 +3,11 @@
 
 #include "animal.h"
 
-class Loup : Animal
+class Loup : public Animal
 {
     public :
-    Loup();
+    Loup(int maxX, int maxY);
+    Loup(int maxX, int maxY, int a, int b);
     void setAttaque();
     void deplace(int maxX, int maxY);
 };

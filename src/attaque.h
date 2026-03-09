@@ -15,12 +15,12 @@ class Attaque
     
     Attaque(); //crée une attaque random
     Attaque(Type t); //crée une attaque spécifique
-    int getTypeAttaque() const {return _type;}
+    Type getTypeAttaque() const {return _type;}
     bool resoudreAttaque(Attaque &a) const;
     std::string getNomAttaque() const;
 
     private : 
-    int     _type;
+    Type     _type;
 };
 
 

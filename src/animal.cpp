@@ -2,7 +2,9 @@
 
 Animal::Animal(int maxX, int maxY)
 {
-
+    this->x = std::rand() % maxX;
+    this->y = std::rand() % maxY;
+    this->vivant = true;
 }
 
 Animal::Animal(int maxX, int maxY, int a, int b)
@@ -31,11 +33,13 @@ void Animal::setVivant(bool v){
 
 
 bool Animal::attaque(Animal &a){
-    if (this->vivant && a.vivant) {
- 
-        return true; 
+  if (this->_typeAttaque.resoudreAttaque(a._typeAttaque)) {
+        a.setVivant(false);
+        return true; // "this" a gagné
+    } else {
+        this->setVivant(false);
+        return false; // "this" a perdu
     }
-    return false;
 }
 
 
