@@ -3,10 +3,11 @@
 
 #include "animal.h"
 
-class Pierre : Animal
+class Pierre : public Animal
 {
     public :
-    Pierre();
+    Pierre(int maxX, int maxY);
+    Pierre(int maxX, int maxY, int a, int b);
     void setAttaque();
     void deplace(int maxX, int maxY);
 };
