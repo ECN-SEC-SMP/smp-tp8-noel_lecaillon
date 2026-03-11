@@ -85,15 +85,6 @@ Ce fichier contient la logique principale du programme.
         *   Définit les dimensions de la grille (`maxX`, `maxY`).
         *   Crée un `std::vector<Animal*>` pour stocker les pointeurs vers les animaux.
         *   Instancie et ajoute plusieurs objets de chaque type d'animal (Loup, Pierre, Lion, Ours) au vecteur.
-    *   **Boucle de Simulation (`while (true)`) :**
-        *   Appelle `clearScreen()` pour effacer la console.
-        *   Affiche le numéro du tour actuel.
-        *   **Phase de Déplacement :** Itère sur tous les animaux vivants et appelle leur méthode `deplace()`.
-        *   **Phase de Combat :** Itère sur toutes les paires d'animaux pour détecter les collisions sur la même case. Si une collision survient, les deux animaux appellent `setAttaque()` (pour définir leur attaque du tour) puis leur méthode `attaque()`. Le résultat du combat est affiché.
-        *   **Phase d'Affichage :** Appelle `afficherPlateau()` pour montrer l'état mis à jour de la grille.
-        *   **Vérification de Fin :** Compte les animaux vivants. Si le nombre est inférieur ou égal à 1, la simulation se termine, en annonçant le survivant ou un match nul.
-        *   **Pause :** Introduit une pause de 500 millisecondes (`std::chrono::milliseconds(500)`) pour ralentir la simulation et la rendre visible.
-        *   Incrémente le compteur de tours.
     *   **Nettoyage :** Après la fin de la boucle, chaque pointeur d'animal est supprimé pour libérer la mémoire allouée dynamiquement.
 
 ## Conclusion
